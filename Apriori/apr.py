@@ -15,7 +15,7 @@ df = pd.DataFrame(te_ary, columns=te.columns_)
 frequent_itemsets = apriori(df, min_support=0.6, use_colnames=True)
 # Association Rule Mining
 res = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
-# remove frozenset
+
 res['antecedents'] = [tuple(x) for x in res['antecedents']]
 res['consequents'] = [tuple(x) for x in res['consequents']]
 res1 = res[['antecedents','consequents','support','support', 'confidence','lift']]

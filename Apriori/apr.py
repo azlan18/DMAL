@@ -1,5 +1,3 @@
-# prompt: same output as above set, but without the frozenset line
-
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori

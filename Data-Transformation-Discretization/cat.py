@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
-df = pd.read_csv("50_Startups.csv")
+df = pd.read_csv("cat.csv")
 
 # One-hot encode the 'State' column
 df = pd.get_dummies(df, columns=['State'], prefix='State', dtype=int)

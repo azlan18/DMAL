@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
-df = pd.read_csv("Book1.csv")
+df = pd.read_csv("no-cat.csv")
 
 # Standardize the features
 scaler = StandardScaler()

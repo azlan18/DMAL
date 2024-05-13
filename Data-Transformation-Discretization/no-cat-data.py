@@ -1,21 +1,13 @@
 import pandas as pd
-
-# Load the dataset
-df = pd.read_csv("Book1.csv")
-
-# Display the first few rows of the dataset
-print(df.head())
-
-import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
 df = pd.read_csv("Book1.csv")
 
-# Standardize the variables
+# Standardize the features
 scaler = StandardScaler()
-df[['R&D Spend', 'Marketing Spend', 'Profit']] = scaler.fit_transform(df[['R&D Spend', 'Marketing Spend', 'Profit']])
+df[['R&D Spend', 'Marketing Spend']] = scaler.fit_transform(df[['R&D Spend', 'Marketing Spend']])
 
 # Identify outliers
 Q1 = df.quantile(0.25)
